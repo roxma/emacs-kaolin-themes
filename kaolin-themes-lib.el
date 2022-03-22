@@ -590,7 +590,7 @@
     (tooltip      (:background tooltip-bg :foreground tooltip-fg))
 
     (match        (:background nil :foreground hl))
-    (isearch      (:background nil :foreground hl :bold bold :underline underline))
+    (isearch      (:background yellow0 :foreground gray0))
     (isearch-fail (:background nil :foreground err))
 
     ;; Emacs UI
@@ -1548,7 +1548,7 @@
     (evil-ex-info                   (:foreground orange1))
     (evil-ex-substitute-matches     (:background nil :foreground err :underline underline))
     (evil-ex-substitute-replacement (:background nil :foreground spring-green1))
-    (evil-ex-lazy-highlight         (:inherit 'lazy-highlight))
+    (evil-ex-lazy-highlight         (:background yellow1 :foreground gray0))
 
     ;; Evil-goggles
     ;; TODO: add rest of evil goggles faces
