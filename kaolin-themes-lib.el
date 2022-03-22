@@ -452,9 +452,11 @@
     (rb8 (if kaolin-themes-distinct-parentheses spring-green3 magenta4))
     (rb9 (if kaolin-themes-distinct-parentheses cerise3 violet4))
 
-    (diff-add    spring-green2)
+    (diff-add    spring-green1)
     (diff-mod    vermilion4)
-    (diff-rem    crimson4)
+    (diff-rem    red4)
+
+    (diff-bg-rem  crimson4)
 
     (diff-bg-add  spring-green4)
     (diff-bg-add2 spring-green3)
@@ -1251,7 +1253,7 @@
     (diff-removed           (:background diff-rem :foreground adaptive-fg))
     (diff-refine-added      (:background diff-bg-add :foreground black0))
     (diff-refine-changed    (:background diff-mod :foreground adaptive-fg))
-    (diff-refine-removed    (:background diff-rem :foreground black0))
+    (diff-refine-removed    (:background diff-bg-rem :foreground black0))
     (diff-indicator-added   (:background bg1 :foreground diff-add))
     (diff-indicator-changed (:background diff-mod :foreground adaptive-fg))
     (diff-indicator-removed (:background diff-rem :foreground adaptive-fg))
