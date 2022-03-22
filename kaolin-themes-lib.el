@@ -452,13 +452,12 @@
     (rb8 (if kaolin-themes-distinct-parentheses spring-green3 magenta4))
     (rb9 (if kaolin-themes-distinct-parentheses cerise3 violet4))
 
-    (diff-add    spring-green1)
-    (diff-mod    purple3)
-    (diff-rem    red1)
+    (diff-add    spring-green2)
+    (diff-mod    vermilion4)
+    (diff-rem    crimson4)
 
-    (diff-bg-add spring-green2)
-    (diff-bg-mod vermilion4)
-    (diff-bg-rem crimson4)
+    (diff-bg-add  spring-green4)
+    (diff-bg-add2 spring-green3)
 
     (keyword     teal1)
     (metakey     (if kaolin-themes-distinct-metakeys keyword comment))
@@ -740,7 +739,7 @@
     (hi-pink (:foreground bg1 :background kaolin-magenta))
     (hi-red-b (:foreground kaolin-red :weight 'bold))
     (hi-yellow (:foreground bg1 :background kaolin-yellow))
-    (hi-salmon (:foreground bg1 :background diff-bg-mod))
+    (hi-salmon (:foreground bg1 :background diff-mod))
 
     ;; Highlight indent guides
     (highlight-indent-guides-odd-face        (:background hl-indent))
@@ -1048,10 +1047,10 @@
     (magit-diff-base-highlight    (:background vermilion3 :foreground fg1))
     (magit-diff-context           (:background bg1 :foreground fg3))
     (magit-diff-context-highlight (:background bg2 :foreground fg2))
-    (magit-diff-added             (:background bg1 :foreground diff-bg-add))
-    (magit-diff-added-highlight   (:background diff-bg-add :foreground fg1))
-    (magit-diff-removed           (:background bg1 :foreground diff-bg-rem))
-    (magit-diff-removed-highlight (:background diff-bg-rem :foreground fg1))
+    (magit-diff-added             (:background bg1 :foreground diff-add))
+    (magit-diff-added-highlight   (:background diff-bg-add2 :foreground fg1))
+    (magit-diff-removed           (:background bg1 :foreground diff-rem))
+    (magit-diff-removed-highlight (:background diff-rem :foreground fg1))
     (magit-diffstat-added         (:foreground diff-add))
     (magit-diffstat-removed       (:foreground diff-rem))
     (magit-tag                    (:foreground orange1))
@@ -1247,24 +1246,24 @@
     (diff-nonexistent       (:foreground err))
     (diff-hunk-header       (:background bg4))
     (diff-file-header       (:background nil :foreground keyword))
-    (diff-added             (:background diff-bg-add :foreground adaptive-fg))
-    (diff-changed           (:background diff-bg-mod :foreground adaptive-fg))
-    (diff-removed           (:background diff-bg-rem :foreground adaptive-fg))
-    (diff-refine-added      (:background diff-add :foreground adaptive-fg))
+    (diff-added             (:background bg1 :foreground diff-add))
+    (diff-changed           (:background diff-mod :foreground adaptive-fg))
+    (diff-removed           (:background diff-rem :foreground adaptive-fg))
+    (diff-refine-added      (:background diff-bg-add :foreground adaptive-fg))
     (diff-refine-changed    (:background diff-mod :foreground adaptive-fg))
     (diff-refine-removed    (:background diff-rem :foreground adaptive-fg))
-    (diff-indicator-added   (:background diff-bg-add :foreground adaptive-fg))
-    (diff-indicator-changed (:background diff-bg-mod :foreground adaptive-fg))
-    (diff-indicator-removed (:background diff-bg-rem :foreground adaptive-fg))
+    (diff-indicator-added   (:background bg1 :foreground diff-add))
+    (diff-indicator-changed (:background diff-mod :foreground adaptive-fg))
+    (diff-indicator-removed (:background diff-rem :foreground adaptive-fg))
 
     ;; smerge
     (smerge-base    (:background bg2))
-    (smerge-upper   (:background diff-bg-add))
-    (smerge-lower   (:background diff-bg-rem))
+    (smerge-upper   (:background diff-add))
+    (smerge-lower   (:background diff-rem))
     (smerge-markers (:background comment :foreground bg1))
     ;; Emacs version <= 25
-    (smerge-mine    (:background diff-bg-add))
-    (smerge-other   (:background diff-bg-rem))
+    (smerge-mine    (:background diff-add))
+    (smerge-other   (:background diff-rem))
     ;; ??
     ;; smerge-refined-added
     ;; smerge-refined-removed
@@ -1273,7 +1272,7 @@
     ;; (ediff-current-diff-A (:background hl-line :foreground fg4))
     ;; (ediff-current-diff-B (:background hl-line :foreground fg4))
     ;; (ediff-current-diff-C (:background hl-line :foreground fg4))
-    (ediff-current-diff-Ancestor (:background diff-bg-mod :foreground fg2))
+    (ediff-current-diff-Ancestor (:background diff-mod :foreground fg2))
     (ediff-current-diff-A (:background red2 :foreground fg2))
     (ediff-current-diff-B (:background spring-green2 :foreground fg2))
     (ediff-current-diff-C (:background cyan2 :foreground fg2))
@@ -1283,7 +1282,7 @@
     (ediff-even-diff-B (:background bg3))
     (ediff-even-diff-C (:background bg3))
 
-    (ediff-fine-diff-Ancestor (:background diff-bg-mod :bold bold :foreground white0))
+    (ediff-fine-diff-Ancestor (:background diff-mod :bold bold :foreground white0))
     (ediff-fine-diff-A (:background red3 :bold bold :foreground white0))
     (ediff-fine-diff-B (:background spring-green1 :bold bold :foreground white0))
     (ediff-fine-diff-C (:background cyan1 :bold bold :foreground white0))
@@ -1341,7 +1340,7 @@
     (treemacs-git-modified-face     (:foreground diff-mod))
     (treemacs-fringe-indicator-face (:foreground prep))
     (treemacs-tags-face             (:foreground fg1))
-    (treemacs-on-success-pulse-face (:background diff-bg-add :foreground bg1))
+    (treemacs-on-success-pulse-face (:background diff-add :foreground bg1))
     (treemacs-on-failure-pulse-face (:background err :foreground bg1))
     (treemacs-term-node-face        (:foreground prep))
 
@@ -1490,11 +1489,11 @@
     (org-habit-clear-face          (:background kaolin-blue))
     (org-habit-clear-future-face   (:background bg4))
     (org-habit-ready-face          (:background diff-add))
-    (org-habit-ready-future-face   (:background diff-bg-add))
+    (org-habit-ready-future-face   (:background diff-add))
     (org-habit-alert-face          (:background diff-mod))
-    (org-habit-alert-future-face   (:background diff-bg-mod))
+    (org-habit-alert-future-face   (:background diff-mod))
     (org-habit-overdue-face        (:background diff-rem))
-    (org-habit-overdue-future-face (:background diff-bg-rem))
+    (org-habit-overdue-future-face (:background diff-rem))
 
     ;; Re-builder
     (reb-match-0 (:foreground bg1 :background hl))
@@ -1672,7 +1671,7 @@
     (helm-match                               (:foreground search1 :bold bold))
     (helm-selection                           (:background bg3 :foreground hl :bold bold))
     (helm-selection-line                      (:inherit 'helm-selection))
-    (helm-visible-mark                        (:background diff-bg-add :foreground bg1))
+    (helm-visible-mark                        (:background diff-add :foreground bg1))
     (helm-candidate-number                    (:foreground str))
     (helm-separator                           (:foreground type))
 
@@ -1685,7 +1684,7 @@
     (helm-bookmark-w3m                        (:foreground search1))
 
     (helm-buffer-process                      (:foreground str))
-    (helm-buffer-saved-out                    (:background diff-bg-mod :foreground bg1))
+    (helm-buffer-saved-out                    (:background diff-mod :foreground bg1))
     (helm-buffer-size                         (:foreground fg1))
     (helm-buffer-directory                    (:foreground keyword))
     (helm-buffer-archive                      (:foreground const))
@@ -1736,7 +1735,7 @@
 
     ;; Wgrep
     (wgrep-face        (:background bg2 :foreground diff-mod))
-    (wgrep-delete-face (:background diff-bg-rem :foreground bg2))
+    (wgrep-delete-face (:background diff-rem :foreground bg2))
     (wgrep-done-face   (:foreground done))
     (wgrep-file-face   (:foreground comment))
     (wgrep-reject-face (:inherit 'error))
