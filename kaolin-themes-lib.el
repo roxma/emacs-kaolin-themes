@@ -1258,6 +1258,8 @@
     (diff-indicator-changed (:background diff-mod :foreground adaptive-fg))
     (diff-indicator-removed (:background diff-rem :foreground adaptive-fg))
 
+    (vdiff-addition-face    (:background diff-bg-add :foreground adaptive-fg))
+
     ;; smerge
     (smerge-base    (:background bg2))
     (smerge-upper   (:background diff-add))
